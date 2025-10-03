@@ -173,42 +173,48 @@
   </section>
 
   <!-- Quote Form -->
-  <section class="quote" id="quote-form">
-    <div class="container">
-      <div class="quote-content">
-        <div class="quote-text">
-          <h2>Presupuesto Express</h2>
-          <p>Recibe tu presupuesto detallado en menos de 60 minutos. Sin compromiso.</p>
-        </div>
-        <form id="Presupuestos_RServicios_BML" action="https://formspree.io/f/manpjzrd" method="POST" enctype="multipart/form-data">
-          <div class="form-row">
-            <input type="text" name="nombre" placeholder="Nombre *" required>
-            <input type="email" name="email" placeholder="Email *" required>
-          </div>
-          <div class="form-row">
-            <input type="tel" name="telefono" placeholder="Teléfono">
-            <select name="servicio" required>
-              <option value="" disabled selected>Servicio *</option>
-              <option value="Pladur">Pladur</option>
-              <option value="Fontanería">Fontanería</option>
-              <option value="Pintura">Pintura</option>
-              <option value="Alicatado">Alicatado</option>
-              <option value="Bajantes">Bajantes</option>
-              <option value="Emergencia">Emergencia</option>
-            </select>
-          </div>
-          <textarea name="mensaje" placeholder="Detalles del proyecto"></textarea>
-          <label class="file-upload">
-            <i class="fas fa-camera"></i>
-            <span>Adjuntar fotos (máx. 3)</span>
-            <input type="file" name="fotos" accept="image/*" multiple id="fileInput">
-          </label>
-          <div id="filePreview" class="file-preview"></div>
-          <button type="submit" class="btn btn-primary w-100">Enviar Solicitud</button>
-        </form>
+<!-- FORMULARIO -->
+<section class="quote" id="quote-form">
+  <div class="container">
+    <div class="quote-content">
+      <div class="quote-text">
+        <h2>Presupuesto Express</h2>
+        <p>Recibe tu presupuesto detallado en menos de 60 minutos. Sin compromiso.</p>
       </div>
+      <form class="quote-form" id="presupuestoForm" action="https://formspree.io/f/manpjzrd" method="POST" enctype="multipart/form-data">
+        <div class="form-row">
+          <input type="text" name="nombre" placeholder="Nombre *" required>
+          <input type="email" name="email" placeholder="Email *" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" name="telefono" placeholder="Teléfono">
+          <select name="servicio" required>
+            <option value="" disabled selected>Servicio *</option>
+            <option value="Pladur">Pladur</option>
+            <option value="Fontanería">Fontanería</option>
+            <option value="Pintura">Pintura</option>
+            <option value="Alicatado">Alicatado</option>
+            <option value="Bajantes">Bajantes</option>
+            <option value="Emergencia">Emergencia</option>
+          </select>
+        </div>
+        <textarea name="mensaje" placeholder="Detalles del proyecto"></textarea>
+        
+        <!-- Input de archivos con preview -->
+        <label class="file-upload">
+          <i class="fas fa-camera"></i>
+          <span>Adjuntar fotos (máx. 3)</span>
+          <input type="file" name="fotos" accept="image/*" multiple id="fileInput">
+        </label>
+        
+        <!-- Preview de imágenes -->
+        <div id="filePreview" class="file-preview"></div>
+        
+        <button type="submit" class="btn btn-primary w-100">Enviar Solicitud</button>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Reviews -->
   <section class="reviews">
@@ -268,5 +274,6 @@
   <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
