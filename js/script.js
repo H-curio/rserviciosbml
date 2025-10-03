@@ -1,10 +1,14 @@
-// File preview
+// Manejo de preview de imágenes
 document.getElementById('fileInput')?.addEventListener('change', function(e) {
   const preview = document.getElementById('filePreview');
   preview.innerHTML = '';
-  const files = Array.from(e.target.files).slice(0, 3);
+  const files = Array.from(e.target.files).slice(0, 3); // Máximo 3
+  
+  if (files.length === 0) return;
+  
   files.forEach(file => {
     if (!file.type.match('image.*')) return;
+    
     const reader = new FileReader();
     reader.onload = function(e) {
       const img = document.createElement('img');
@@ -15,7 +19,7 @@ document.getElementById('fileInput')?.addEventListener('change', function(e) {
   });
 });
 
-// Form submission
+// Envío del formulario con validación
 document.getElementById('presupuestoForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
   
@@ -26,17 +30,8 @@ document.getElementById('presupuestoForm')?.addEventListener('submit', async fun
   submitBtn.disabled = true;
   submitBtn.textContent = 'Enviando...';
   
-  // Aquí iría tu endpoint de Formspree
-  const endpoint = this.getAttribute('action');
-  if (endpoint === '#' || !endpoint) {
-    alert('⚠️ Formulario no configurado. Reemplaza el action con tu endpoint de Formspree.');
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-    return;
-  }
-  
   try {
-    const response = await fetch(endpoint, {
+    const response = await fetch(this.getAttribute('action'), {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
@@ -57,7 +52,7 @@ document.getElementById('presupuestoForm')?.addEventListener('submit', async fun
   }
 });
 
-// Smooth scroll
+// Scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
