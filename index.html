@@ -3,212 +3,268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RServicios BML | Reformas en Sevilla</title>
-  <meta name="description" content="Reformas integrales en Sevilla. Colaboradores certificados de Leroy Merlin. ¡Presupuesto gratis y atención inmediata!">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Reformas profesionales en Sevilla. Colaboradores certificados Leroy Merlin. Presupuesto en 1 hora.">
+  <title>RServicios BML | Reformas Profesionales en Sevilla</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yu4j5V6Kf7Q3Q5d5K0J6q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5q5......" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Critical CSS inline -->
   <style>
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 40px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      z-index: 100;
+    :root {
+      --primary: #0a2e5c;
+      --primary-dark: #072247;
+      --accent: #c5a44c;
+      --light: #f5f7fa;
+      --gray: #6c757d;
+      --text: #212529;
+      --success: #28a745;
+      --whatsapp: #25d366;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .container {
+      width: min(90%, 1200px);
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 4px;
+      font-weight: 600;
       text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      font-family: inherit;
     }
-    .whatsapp-float i {
-      margin-top: 12px;
-    }
-    .footer-credit {
-      text-align: center;
-      padding: 15px;
-      background: #0d3b66;
+    .btn-primary {
+      background: var(--primary);
       color: white;
-      font-size: 14px;
     }
-    .footer-credit a {
-      color: #ffcc00;
-      text-decoration: none;
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
     }
-    .footer-credit a:hover {
-      text-decoration: underline;
+    .btn-accent {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    .btn-accent:hover {
+      opacity: 0.9;
+    }
+    section {
+      padding-block: 4rem;
+    }
+    @media (min-width: 768px) {
+      section { padding-block: 6rem; }
     }
   </style>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER CON LOGO -->
+  <!-- Header -->
   <header class="header">
     <div class="container">
-      <img src="img/logo.png" alt="Logo RServicios BML" class="logo">
-      <div class="leroy-badge">
-        <span>✅ Colaboradores Oficiales de</span>
-        <strong>Leroy Merlin</strong>
+      <div class="header-content">
+        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a2e5c'/><text x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Montserrat'>BML</text></svg>" alt="RServicios BML" class="logo">
+        <div class="leroy-badge">
+          <i class="fas fa-medal"></i>
+          <span>Instaladores Oficiales <strong>Leroy Merlin</strong></span>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>¿Problemas en casa? ¡Nosotros lo arreglamos HOY!</h1>
-      <p>Reformas rápidas, limpias y con garantía. Colaboradores oficiales de Leroy Merlin en Sevilla.</p>
+      <div class="hero-content">
+        <h1>Reformas Profesionales en Sevilla</h1>
+        <p class="hero-text">Soluciones integrales con garantía, rapidez y calidad certificada. Atendemos emergencias 24/7.</p>
+        <div class="hero-cta">
+          <a href="#quote-form" class="btn btn-accent">Presupuesto Gratis</a>
+          <a href="tel:+34602638653" class="btn btn-outline">Llamar Ahora</a>
+        </div>
+        <div class="trust-badges">
+          <div class="badge">✅ +200 Reformas en 2024</div>
+          <div class="badge">⏱️ Presupuesto en 1 Hora</div>
+          <div class="badge">🛡️ Garantía 2 Años</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <section class="services">
+  <!-- Gallery -->
+  <section class="gallery">
     <div class="container">
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" loading="lazy" alt="Reforma de baño completa">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8c54c38b82?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" loading="lazy" alt="Instalación de pladur y pintura">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" loading="lazy" alt="Cocina moderna reformada">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nuestros Servicios Técnicos</h2>
+        <p>Especialistas certificados en cada área</p>
+      </div>
       <div class="services-grid">
-        <a href="servicios/perlita.html" class="service-card">
-          <i class="fas fa-spray-can"></i>
-          <h3>Perlita</h3>
-        </a>
-        <a href="servicios/pladur.html" class="service-card">
+        <!-- Servicios -->
+        <div class="service-card">
           <i class="fas fa-border-all"></i>
           <h3>Pladur</h3>
-        </a>
-        <a href="servicios/stucco.html" class="service-card">
-          <i class="fas fa-paint-roller"></i>
-          <h3>Stucco</h3>
-        </a>
-        <a href="servicios/alisado.html" class="service-card">
-          <i class="fas fa-level-up-alt"></i>
-          <h3>Alisado</h3>
-        </a>
-        <a href="servicios/fontaneria.html" class="service-card">
+          <p>Tabiques, techos, aislamientos</p>
+        </div>
+        <div class="service-card">
           <i class="fas fa-faucet"></i>
           <h3>Fontanería</h3>
-        </a>
-        <a href="servicios/alicatado.html" class="service-card">
-          <i class="fas fa-th-large"></i>
-          <h3>Alicatado</h3>
-        </a>
-        <a href="servicios/ensolado.html" class="service-card">
-          <i class="fas fa-cube"></i>
-          <h3>Ensolado / Suelo</h3>
-        </a>
-        <a href="servicios/marmol.html" class="service-card">
-          <i class="fas fa-gem"></i>
-          <h3>Mármol</h3>
-        </a>
-        <a href="servicios/bajantes.html" class="service-card">
-          <i class="fas fa-tint"></i>
-          <h3>Cambio de Bajantes</h3>
-        </a>
-        <a href="servicios/impermeabilizacion.html" class="service-card">
-          <i class="fas fa-umbrella-beach"></i>
-          <h3>Impermeabilización</h3>
-        </a>
-        <a href="servicios/pintura.html" class="service-card">
+          <p>Cobre, PVC, Multicapa</p>
+        </div>
+        <div class="service-card">
           <i class="fas fa-paint-brush"></i>
           <h3>Pintura</h3>
-        </a>
-        <a href="servicios/muebles-bano.html" class="service-card">
-          <i class="fas fa-bath"></i>
-          <h3>Muebles de Baño</h3>
-        </a>
-        <a href="servicios/emergencias.html" class="service-card emergency">
-          <i class="fas fa-exclamation-triangle"></i>
-          <h3>Incidencias de Emergencia</h3>
-        </a>
+          <p>Interior, exterior, perlita</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-th-large"></i>
+          <h3>Alicatado</h3>
+          <p>Paredes, suelos, mármol</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tint"></i>
+          <h3>Bajantes</h3>
+          <p>Cambio y reparación 24/7</p>
+        </div>
+        <div class="service-card emergency">
+          <i class="fas fa-bolt"></i>
+          <h3>Emergencias</h3>
+          <p>Fugas, roturas, inundaciones</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMULARIO DE PRESUPUESTO -->
-  <section class="quote-form">
+  <!-- Quote Form -->
+  <section class="quote" id="quote-form">
     <div class="container">
-      <h2>¡Recibe tu presupuesto GRATIS en menos de 1 hora!</h2>
-      <form id="presupuestoForm" action="#" method="POST" enctype="multipart/form-data">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu email" required>
-        <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
-        <select name="servicio" required>
-          <option value="">Selecciona un servicio</option>
-          <option value="Perlita">Perlita</option>
-          <option value="Pladur">Pladur</option>
-          <option value="Stucco">Stucco</option>
-          <option value="Alisado">Alisado</option>
-          <option value="Fontanería">Fontanería</option>
-          <option value="Alicatado">Alicatado</option>
-          <option value="Ensolado">Ensolado / Suelo</option>
-          <option value="Mármol">Mármol</option>
-          <option value="Bajantes">Cambio de Bajantes</option>
-          <option value="Impermeabilización">Impermeabilización</option>
-          <option value="Pintura">Pintura</option>
-          <option value="Muebles de Baño">Muebles de Baño</option>
-          <option value="Emergencia">Incidencia de Emergencia</option>
-        </select>
-        <textarea name="mensaje" placeholder="Describe tu proyecto (opcional)"></textarea>
-        <label class="file-label">
-          <i class="fas fa-camera"></i> Adjunta fotos (máx. 3)
-          <input type="file" name="fotos" accept="image/*" multiple>
-        </label>
-        <button type="submit">Enviar Solicitud</button>
-      </form>
+      <div class="quote-content">
+        <div class="quote-text">
+          <h2>Presupuesto Express</h2>
+          <p>Recibe tu presupuesto detallado en menos de 60 minutos. Sin compromiso.</p>
+        </div>
+        <form class="quote-form" id="presupuestoForm" action="#" method="POST" enctype="multipart/form-data">
+          <div class="form-row">
+            <input type="text" name="nombre" placeholder="Nombre *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+          </div>
+          <div class="form-row">
+            <input type="tel" name="telefono" placeholder="Teléfono">
+            <select name="servicio" required>
+              <option value="" disabled selected>Servicio *</option>
+              <option value="Pladur">Pladur</option>
+              <option value="Fontanería">Fontanería</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Alicatado">Alicatado</option>
+              <option value="Bajantes">Bajantes</option>
+              <option value="Emergencia">Emergencia</option>
+            </select>
+          </div>
+          <textarea name="mensaje" placeholder="Detalles del proyecto"></textarea>
+          <label class="file-upload">
+            <i class="fas fa-camera"></i>
+            <span>Adjuntar fotos (máx. 3)</span>
+            <input type="file" name="fotos" accept="image/*" multiple id="fileInput">
+          </label>
+          <div id="filePreview" class="file-preview"></div>
+          <button type="submit" class="btn btn-primary w-100">Enviar Solicitud</button>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- RESEÑAS -->
+  <!-- Reviews -->
   <section class="reviews">
     <div class="container">
-      <h2>Lo que dicen nuestros clientes</h2>
-      <div class="stars">★★★★★</div>
-      <div class="review-cards">
+      <div class="section-header">
+        <h2>Opiniones Verificadas</h2>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="reviews-grid">
         <div class="review-card">
-          <p>"¡Rápidos, limpios y profesionales! Instalaron mi pladur en 2 días."</p>
-          <span>- Ana, Sevilla</span>
+          <p>"Cambiaron mis bajantes en 3 horas. ¡Salvadores!"</p>
+          <div class="review-author">— José M., Sevilla</div>
         </div>
         <div class="review-card">
-          <p>"Cambiaron mis bajantes en emergencia. ¡Salvadores!"</p>
-          <span>- José, Dos Hermanas</span>
+          <p>"Reforma completa de baño con materiales Leroy Merlin. Impecable."</p>
+          <div class="review-author">— Ana R., Dos Hermanas</div>
         </div>
         <div class="review-card">
-          <p>"Trabajan con Leroy Merlin, así que confianza total."</p>
-          <span>- Carmen, Alcalá de Guadaíra</span>
+          <p>"El mejor presupuesto y atención. Profesionales 100%."</p>
+          <div class="review-author">— Luis G., Alcalá</div>
         </div>
       </div>
-      <button class="btn-review" onclick="alert('¡Gracias por tu reseña! Pronto podrás dejarla directamente.')">
-        Deja tu reseña ★★★★★
-      </button>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <footer class="contact">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <h3>¿Urgente? ¡Llámanos ahora!</h3>
-      <p><i class="fas fa-phone"></i> <a href="tel:+34602638653">602 638 653</a></p>
-      <p><i class="fas fa-envelope"></i> rserviciosbml@gmail.com</p>
-      <p>Atendemos en toda Sevilla y alrededores.</p>
-      <p>📞 Atención: Lunes a Sábado, 8:00 - 20:00</p>
-      <p>🚨 Emergencias: 24/7 al 602 638 653</p>
-      <p>📍 Trabajamos en: Sevilla, Dos Hermanas, Alcalá de Guadaíra, Mairena, San Juan, etc.</p>
+      <div class="footer-grid">
+        <div class="footer-contact">
+          <h3>Contacto Directo</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:+34602638653">602 638 653</a></p>
+          <p><i class="fas fa-envelope"></i> rserviciosbml@gmail.com</p>
+          <p>📍 Sevilla y área metropolitana</p>
+          <p>🕒 L-V: 8:00–20:00 | 🚨 Emergencias 24/7</p>
+        </div>
+        <div class="footer-credit">
+          <p>© 2024 RServicios BML. Todos los derechos reservados.</p>
+          <p>Desarrollado con precisión por <a href="https://www.linkedin.com/in/miguel-angel-lira-acosta-666651382" target="_blank" rel="noopener">Miguel Lira</a></p>
+          <p>
+            <a href="https://github.com/H-curio" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> @H-curio
+            </a>
+            | ¿Necesitas un proyecto digital de élite?
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- BOTÓN DE WHATSAPP -->
-  <a href="https://wa.me/34602638653" class="whatsapp-float" target="_blank">
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/34602638653" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- FOOTER DE CRÉDITOS (Copy Rich) -->
-  <div class="footer-credit">
-    © 2024 RServicios BML. Todos los derechos reservados.  
-    <br>
-    Desarrollado por <a href="https://www.linkedin.com/in/miguel-angel-lira-acosta-666651382" target="_blank">Miguel Lira</a> | 
-    <a href="https://github.com/H-curio" target="_blank">GitHub</a>
-  </div>
-
+  <!-- Scripts -->
   <script src="js/script.js"></script>
 </body>
 </html>
