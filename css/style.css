@@ -130,6 +130,18 @@
 }
 
 /* Quote Form */
+.file-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.file-preview img {
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+}
 .quote {
   background: white;
 }
@@ -299,3 +311,4 @@
   .footer-credit { text-align: center; margin-top: 2rem; }
   .trust-badges { gap: 0.8rem; }
 }
+
