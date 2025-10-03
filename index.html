@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RServicios BML | Reformas en Sevilla</title>
+    <meta name="description"
+        content="Reformas integrales en Sevilla. Colaboradores certificados de Leroy Merlin. ¡Presupuesto gratis y atención inmediata!">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER CON LOGO -->
+    <header class="header">
+        <div class="container">
+            <img src="img/logo.png" alt="Logo RServicios BML" class="logo">
+            <div class="leroy-badge">
+                <span>✅ Colaboradores Oficiales de</span>
+                <strong>Leroy Merlin</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>¿Qué necesitas reformar hoy?</h1>
+            <p>Selecciona tu área de trabajo y descubre nuestros proyectos reales en Sevilla.</p>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Ejemplo: Perlita -->
+                <a href="servicios/perlita.html" class="service-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Perlita</h3>
+                </a>
+                <a href="servicios/pladur.html" class="service-card">
+                    <i class="fas fa-border-all"></i>
+                    <h3>Pladur</h3>
+                </a>
+                <a href="servicios/stucco.html" class="service-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Stucco</h3>
+                </a>
+                <a href="servicios/alisado.html" class="service-card">
+                    <i class="fas fa-level-up-alt"></i>
+                    <h3>Alisado</h3>
+                </a>
+                <a href="servicios/fontaneria.html" class="service-card">
+                    <i class="fas fa-faucet"></i>
+                    <h3>Fontanería</h3>
+                </a>
+                <a href="servicios/alicatado.html" class="service-card">
+                    <i class="fas fa-th-large"></i>
+                    <h3>Alicatado</h3>
+                </a>
+                <a href="servicios/ensolado.html" class="service-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>Ensolado / Suelo</h3>
+                </a>
+                <a href="servicios/marmol.html" class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Mármol</h3>
+                </a>
+                <a href="servicios/bajantes.html" class="service-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Cambio de Bajantes</h3>
+                </a>
+                <a href="servicios/impermeabilizacion.html" class="service-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h3>Impermeabilización</h3>
+                </a>
+                <a href="servicios/pintura.html" class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Pintura</h3>
+                </a>
+                <a href="servicios/muebles-bano.html" class="service-card">
+                    <i class="fas fa-bath"></i>
+                    <h3>Muebles de Baño</h3>
+                </a>
+                <a href="servicios/emergencias.html" class="service-card emergency">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Incidencias de Emergencia</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE PRESUPUESTO -->
+    <section class="quote-form">
+        <div class="container">
+            <h2>¿Necesitas un presupuesto? ¡Es gratis!</h2>
+            <form id="presupuestoForm" action="https://formspree.io/f/manpjzrd" method="POST"
+                enctype="multipart/form-data">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu email" required>
+                <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+                <select name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Perlita">Perlita</option>
+                    <option value="Pladur">Pladur</option>
+                    <option value="Stucco">Stucco</option>
+                    <option value="Alisado">Alisado</option>
+                    <option value="Fontanería">Fontanería</option>
+                    <option value="Alicatado">Alicatado</option>
+                    <option value="Ensolado">Ensolado / Suelo</option>
+                    <option value="Mármol">Mármol</option>
+                    <option value="Bajantes">Cambio de Bajantes</option>
+                    <option value="Impermeabilización">Impermeabilización</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Muebles de Baño">Muebles de Baño</option>
+                    <option value="Emergencia">Incidencia de Emergencia</option>
+                </select>
+                <textarea name="mensaje" placeholder="Describe tu proyecto (opcional)"></textarea>
+                <label class="file-label">
+                    <i class="fas fa-camera"></i> Adjunta fotos (máx. 3)
+                    <input type="file" name="fotos" accept="image/*" multiple>
+                </label>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="stars">★★★★★</div>
+            <div class="review-cards">
+                <div class="review-card">
+                    <p>"¡Rápidos, limpios y profesionales! Instalaron mi pladur en 2 días."</p>
+                    <span>- Ana, Sevilla</span>
+                </div>
+                <div class="review-card">
+                    <p>"Cambiaron mis bajantes en emergencia. ¡Salvadores!"</p>
+                    <span>- José, Dos Hermanas</span>
+                </div>
+                <div class="review-card">
+                    <p>"Trabajan con Leroy Merlin, así que confianza total."</p>
+                    <span>- Carmen, Alcalá de Guadaíra</span>
+                </div>
+            </div>
+            <!-- Botón para dejar reseña (opcional, redirige a Google o formulario) -->
+            <button class="btn-review" onclick="alert('¡Gracias por tu reseña! Pronto podrás dejarla directamente.')">
+                Deja tu reseña ★★★★★
+            </button>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <footer class="contact">
+        <div class="container">
+            <h3>¿Urgente? ¡Llámanos ahora!</h3>
+            <p><i class="fas fa-phone"></i> <a href="tel:+34602638653">602 638 653</a></p>
+            <p><i class="fas fa-envelope"></i> rserviciosbml@gmail.com</p>
+            <p>Atendemos en toda Sevilla y alrededores.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
