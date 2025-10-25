@@ -286,7 +286,7 @@
   width: 65px;
   height: 65px;
   background: var(--whatsapp);
-  color: white;
+  color: rgb(238, 232, 232);
   border-radius: 50%;
   display: flex;
   align-items: center;
