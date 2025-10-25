@@ -312,3 +312,12 @@
   .trust-badges { gap: 0.8rem; }
 }
 
+/* Hace que toda la tarjeta sea clickeable */
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.service-link:hover {
+  text-decoration: none;
+}
